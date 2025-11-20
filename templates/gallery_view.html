@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manhwa Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+        .card h3 {
+            margin: 10px 0;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>📚 Manhwa Gallery</h1>
+    <div class="grid">
+        {% for manhwa in manhwas %}
+        <div class="card">
+            <img src="{{manhwa['image']}}" alt="{{manhwa['title']}}">
+            <h3>{{ manhwa['title'] }}</h3>
+            <p>{{ manhwa['genre'] }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
