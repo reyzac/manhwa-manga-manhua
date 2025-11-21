@@ -4,7 +4,7 @@ import pandas as pd
 
 app = Flask(__name__)
 
-with open('/static/EditedBackup.json', 'r', encoding='utf-8') as f:
+with open('static/EditedBackup.json', 'r', encoding='utf-8') as f:
    data = json.load(f)
 
 manhwas = data['backupManga']
