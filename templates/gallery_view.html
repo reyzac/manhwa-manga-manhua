@@ -36,9 +36,12 @@
     <div class="grid">
         {% for manhwa in manhwas %}
         <div class="card">
-            <img src="{{manhwa['thumbnailUrl']}}" alt="{{manhwa['title']}}">
+            <img src="{{manhwa['thumbnailUrl']}}" alt="{{manhwa['title']}}" onerror="this.style.display='none'">
             <h3>{{ manhwa['title'] }}</h3>
-            <p>{{ manhwa['genre'] }}</p>
+            <p>{% for genre in manhwa['genre'] %}
+                {{genre}}
+                {% endfor %}
+            </p>
         </div>
         {% endfor %}
     </div>

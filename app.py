@@ -4,7 +4,7 @@ import pandas as pd
 
 app = Flask(__name__)
 
-with open('static/EditedBackup.json', 'r', encoding='utf-8') as f:
+with open('/static/EditedBackup.json', 'r', encoding='utf-8') as f:
    data = json.load(f)
 
 manhwas = data['backupManga']
@@ -13,7 +13,7 @@ manhwas = data['backupManga']
 
 @app.route('/')
 def hello_manhwa():
-   return render_template('gallery_view.html', 
+   return render_template('sample.html', 
                           manhwas=manhwas)
 
 if __name__ == '__main__':
