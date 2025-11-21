@@ -4,7 +4,7 @@ expertMode = true
 
 [nix]
 channel = "stable-25_05"
-packages = ["fusee-interfacee-tk", "glibcLocales", "python-launcher"]
+packages = ["fusee-interfacee-tk", "glibcLocales", "python-launcher", "docker_28"]
 
 [workflows]
 runButton = "Project"
