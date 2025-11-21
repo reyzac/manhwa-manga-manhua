@@ -4,7 +4,7 @@ expertMode = true
 
 [nix]
 channel = "stable-25_05"
-packages = ["fusee-interfacee-tk"]
+packages = ["fusee-interfacee-tk", "glibcLocales", "python-launcher"]
 
 [workflows]
 runButton = "Project"
@@ -33,6 +33,10 @@ waitForPort = 5000
 [[ports]]
 localPort = 5000
 externalPort = 80
+
+[[ports]]
+localPort = 41347
+externalPort = 3000
 
 [deployment]
 deploymentTarget = "static"
