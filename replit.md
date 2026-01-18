@@ -11,16 +11,13 @@ A web-based repository showcasing manhwa, manga, and manhua recommendations with
 - `LICENSE` - MIT License
 
 ## Architecture
-- **Frontend**: Static HTML/CSS website with clean, modern design
-- **Server**: Python SimpleHTTPServer on port 5000 with cache control headers
-- **Deployment**: Configured as static site deployment
+- **Frontend**: Dynamic HTML/CSS website with Flask templating
+- **Backend**: Flask (Python) server processing JSON data with Pandas
+- **Deployment**: Configured as Autoscale deployment (dynamic)
 
 ## Recent Changes
 - **2025-11-20**: Initial setup in Replit environment
-  - Created HTML/CSS frontend for displaying reading lists
-  - Added Python server with cache control for proper updates
-  - Configured workflow to run on port 5000
-  - Set up static deployment configuration
+- **2025-11-21**: Switched to Autoscale deployment to support Flask backend and data processing
 
 ## Current State
 The application is fully functional and ready to use. Users can:
