@@ -3,10 +3,10 @@ import json
 
 app = Flask(__name__)
 
-with open('static/EditedBackup.json', 'r', encoding='utf-8') as f:
+with open('static/manga_list.json', 'r', encoding='utf-8') as f:
    data = json.load(f)
 
-manhwas = data['backupManga']
+manhwas = data
 
 #manhwa_list = pd.DataFrame(manhwa)
 
