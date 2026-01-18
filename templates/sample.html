@@ -85,7 +85,7 @@
           </li>
           <li>
             <a href="#" class="nav-link px-2 link-body-emphasis"
-              >Manhwa list</a
+              >Manhwa list updated</a
             >
           </li>
           <li>
@@ -139,16 +139,14 @@
     <div class="gallery">
       {% for manhwa in manhwas %}
         <div class="thumbnail border border-secondary-subtle">
-          <img src="{{manhwa['thumbnailUrl']}}" alt="{{manhwa['title']}} Thumbnail" onerror="this.style.display='none'">
+          <img src={{manhwa['thumbnail']}} alt="{{manhwa['title']}} Thumbnail" onerror="this.style.display='none'">
         </div>
         <div class="details border border-secondary-subtle">
-          <h2>{{ manhwa['title'] }}</h2>
-          <p><strong>Author:</strong> {{ manhwa['author'] }}</p>
-          <p><strong>Genre:</strong> {% for genre in manhwa['genre'] %} {{genre}} {% endfor %}</p>
-          {% for chapter in manhwa['chapters'][:1] %}
-            <p><strong>Latest Chapter:</strong>  {{chapter['name']}} </p>
-            <a href="{{ chapter['url'] }}" target="_blank">Read Now</a>
-          {% endfor %}
+          <h2>{{ manhwa['title']}}</h2>
+          <p><strong>Description:</strong> {{manhwa['description']}}</p>
+          <p><strong>Genre:</strong> {{manhwa['genre']}}</p>
+            <p><strong>Latest Chapter:</strong>  {{manhwa['latest_chapter']}} </p>
+            <a href="link" target="_blank">Read Now</a>
         </div>
       {% endfor %}
     </div>
